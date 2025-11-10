@@ -1,22 +1,22 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
 
-/* --- THEME V2: GREEN & GOLD --- */
+/* --- THEME V3: ENHANCED GREEN & GOLD --- */
 
 /* General Body & Theme Styles */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #f4f8f7; /* Lighter, softer green-tinted background */
-    color: #333; /* Darker text for better readability */
+    background-color: #e8f5e9; /* Softer, light green-blue background */
+    color: #2c3e50; /* Darker text for better readability and modern feel */
 }
 
 :root {
-    --primary-color: #2A9D8F; /* Teal Green */
-    --primary-hover-color: #217a6f; /* Darker Teal */
-    --accent-color: #E9C46A; /* Golden Yellow */
-    --text-color: #333;
+    --primary-color: #2E8B57; /* Forest Green */
+    --primary-hover-color: #226640; /* Darker Forest Green */
+    --accent-color: #FFD700; /* Brighter Golden Yellow */
+    --text-color: #2c3e50;
     --card-bg: #ffffff;
-    --border-color: #e0e0e0;
+    --border-color: #d0d0d0;
 }
 
 /* Override Bootstrap Primary Color */
@@ -97,7 +97,7 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e5
     color: #ffffff;
     padding: 8rem 0;
     text-align: left;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737711867-e65929d8699e?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1507842217343-583fd93ab5bd?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop') no-repeat center center;
     background-size: cover;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -224,7 +224,7 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e5
 
 /* Secondary button color for consistency */
 .btn-secondary {
-    background-color: #6c757d; /* Bootstrap default gray */
+    background-color: #6c757d; /* Neutral gray */
     border-color: #6c757d;
     color: #fff;
 }
@@ -232,4 +232,16 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e5
     background-color: #5a6268;
     border-color: #545b62;
     color: #fff;
+}
+
+/* Warning button color for consistency */
+.btn-warning {
+    background-color: #ffc107; /* Soft yellow */
+    border-color: #ffc107;
+    color: #212529; /* Dark text for contrast */
+}
+.btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+    color: #212529;
 }

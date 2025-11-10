@@ -224,11 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Helper function to get color based on category
         const getCategoryColor = (category) => {
             switch (category) {
-                case 'Komedi': return '#E9C46A'; // Golden Yellow
-                case 'Romance': return '#F4A261'; // Sandy Brown
-                case 'Horror': return '#264653'; // Dark Slate Gray
-                case 'Misteri': return '#8ab17d'; // Sage Green
-                case 'Petualangan': return '#2A9D8F'; // Teal Green
+                case 'Komedi': return '#FFD700'; // Brighter Golden Yellow
+                case 'Romance': return '#F08080'; // Light Coral (soft red/pink)
+                case 'Horror': return '#4F6268'; // Darker Slate Gray
+                case 'Misteri': return '#8FBC8F'; // Dark Sea Green (olive green)
+                case 'Petualangan': return '#2E8B57'; // Forest Green
                 default: return '#6c757d'; // Gray
             }
         };
