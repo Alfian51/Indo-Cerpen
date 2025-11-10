@@ -97,7 +97,7 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e5
     color: #ffffff;
     padding: 8rem 0;
     text-align: left;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/id/1015/1920/1080') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737711867-e65929d8699e?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080&fit=crop') no-repeat center center;
     background-size: cover;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -170,11 +170,66 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e5
 }
 
 /* --- WRITE PAGE ENHANCEMENTS --- */
-.editor-title { border: none; font-size: 2.5rem; font-weight: 700; font-family: 'Montserrat', sans-serif; padding: 0.5rem 0; }
-.editor-title:focus { box-shadow: none; }
-.editor-content { border: none; line-height: 1.8; font-size: 1.1rem; }
-.editor-content:focus { box-shadow: none; }
+.editor-title { 
+    border: none; 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    font-family: 'Montserrat', sans-serif; 
+    padding: 0.5rem 0; 
+    color: var(--text-color);
+    background-color: transparent;
+}
+.editor-title:focus { 
+    box-shadow: none; 
+    outline: none;
+}
+.editor-content { 
+    border: none; 
+    line-height: 1.8; 
+    font-size: 1.1rem; 
+    min-height: 400px; /* Ensure enough writing space */
+    color: var(--text-color);
+    background-color: transparent;
+}
+.editor-content:focus { 
+    box-shadow: none; 
+    outline: none;
+}
 .category-select-group .form-check { display: inline-block; margin-right: 0.5rem; margin-bottom: 0.5rem; }
 .category-select-group .form-check-input { display: none; }
-.category-select-group .form-check-label { display: inline-block; padding: 0.5rem 1rem; border: 1px solid #dee2e6; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; font-size: 0.9rem; }
-.category-select-group .form-check-input:checked + .form-check-label { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+.category-select-group .form-check-label { 
+    display: inline-block; 
+    padding: 0.5rem 1rem; 
+    border: 1px solid var(--border-color); 
+    border-radius: 50px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    font-size: 0.9rem; 
+    color: #555;
+    background-color: #f8f8f8;
+}
+.category-select-group .form-check-input:checked + .form-check-label { 
+    background-color: var(--primary-color); 
+    color: #fff; 
+    border-color: var(--primary-color); 
+    box-shadow: 0 2px 5px rgba(42, 157, 143, 0.3);
+}
+
+/* Adjustments for card in write page */
+.card.shadow-sm {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Secondary button color for consistency */
+.btn-secondary {
+    background-color: #6c757d; /* Bootstrap default gray */
+    border-color: #6c757d;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    color: #fff;
+}

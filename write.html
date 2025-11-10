@@ -47,21 +47,27 @@
             <div class="row g-5">
                 <!-- Left Column: Writing Area -->
                 <div class="col-lg-8">
-                    <div class="mb-4">
-                        <label for="cerpenTitle" class="form-label visually-hidden">Judul Cerpen</label>
-                        <input type="text" class="form-control editor-title" id="cerpenTitle" placeholder="Ketik judul cerpenmu di sini..." required>
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Judul Cerpen</h4>
+                            <label for="cerpenTitle" class="form-label visually-hidden">Judul Cerpen</label>
+                            <input type="text" class="form-control editor-title" id="cerpenTitle" placeholder="Ketik judul cerpenmu di sini..." required>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="cerpenContent" class="form-label visually-hidden">Isi Cerita</label>
-                        <textarea class="form-control editor-content" id="cerpenContent" rows="25" placeholder="Mulai tulis ceritamu..." required></textarea>
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title mb-3">Isi Cerpen</h4>
+                            <label for="cerpenContent" class="form-label visually-hidden">Isi Cerita</label>
+                            <textarea class="form-control editor-content" id="cerpenContent" rows="25" placeholder="Mulai tulis ceritamu..." required></textarea>
+                        </div>
                     </div>
                 </div>
     
                 <!-- Right Column: Metadata & Actions -->
                 <div class="col-lg-4">
-                    <div class="card sticky-top" style="top: 2rem;">
+                    <div class="card shadow-sm sticky-top" style="top: 2rem;">
                         <div class="card-body">
-                            <h5 class="card-title mb-3">Publikasikan</h5>
+                            <h5 class="card-title mb-3">Publikasikan Cerpen Anda</h5>
                             
                             <h6 class="mb-3">Pilih Kategori</h6>
                             <div class="category-select-group mb-4">
@@ -92,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-muted small mt-3">
+                    <div class="text-muted small mt-3 p-3 bg-white rounded shadow-sm">
                         <p id="save-status" class="mb-1">Mulai menulis untuk menyimpan draf.</p>
                         <p id="word-count" class="mb-0">0 Kata, 0 Karakter</p>
                     </div>
