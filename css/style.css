@@ -1,83 +1,103 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
 
-/* --- LIBRARY THEME --- */
+/* --- THEME V2: GREEN & GOLD --- */
 
 /* General Body & Theme Styles */
 body {
     font-family: 'Lato', sans-serif;
-    background-color: #FDFBF5; /* Warm off-white background */
-    color: #3D352A; /* Dark brown text */
+    background-color: #f4f8f7; /* Lighter, softer green-tinted background */
+    color: #333; /* Darker text for better readability */
 }
 
 :root {
-    --primary-color: #85582C; /* Warm Brown */
-    --primary-hover-color: #6A4622;
-    --accent-color: #A94442; /* Burgundy/Red accent */
+    --primary-color: #2A9D8F; /* Teal Green */
+    --primary-hover-color: #217a6f; /* Darker Teal */
+    --accent-color: #E9C46A; /* Golden Yellow */
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
 }
 
 /* Override Bootstrap Primary Color */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+    color: #fff;
     font-weight: 700;
 }
 .btn-primary:hover {
     background-color: var(--primary-hover-color);
     border-color: var(--primary-hover-color);
-}
-
-#category-filters .filter-btn.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: #fff;
 }
 
 /* Custom Navbar */
 .navbar-custom {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,.05);
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
     font-family: 'Montserrat', sans-serif;
-    border-bottom: 1px solid #EAE0D3;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.navbar-custom .navbar-brand span { font-weight: 700; font-size: 1.5rem; color: #3D352A; }
-.navbar-custom .nav-link { color: #5A4D3C; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
+.navbar-custom .navbar-brand span { font-weight: 700; font-size: 1.5rem; color: var(--primary-color); }
+.navbar-custom .nav-link { color: #555; font-weight: 700; text-transform: uppercase; font-size: 0.9rem; transition: color 0.3s; }
 .navbar-custom .nav-link:hover, .navbar-custom .nav-link.active { color: var(--primary-color); }
 
 /* Main Content Titles */
-main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #2c3e50; }
 
-/* --- UNIFIED CARD STYLE (V3) --- */
+/* --- UNIFIED CARD STYLE (V3 - Green Theme) --- */
 .story-card-v3 { 
-    border: 1px solid #EAE0D3; 
+    border: 1px solid var(--border-color); 
     border-radius: 8px; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border-top: 4px solid var(--category-color, #6c757d); 
-    background-color: #fff; 
+    background-color: var(--card-bg); 
 }
 .story-card-v3:hover { 
     transform: translateY(-8px); 
-    box-shadow: 0 12px 25px rgba(90, 77, 60, 0.1); 
+    box-shadow: 0 12px 25px rgba(42, 157, 143, 0.15); 
 }
 .story-card-v3 .card-body { display: flex; flex-direction: column; padding: 1.5rem; }
-.story-card-v3 .card-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #3D352A; margin-bottom: 0.75rem; }
-.story-card-v3 .card-text { font-family: 'Lato', sans-serif; color: #5A4D3C; flex-grow: 1; line-height: 1.6; }
+.story-card-v3 .card-title { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--text-color); margin-bottom: 0.75rem; }
+.story-card-v3 .card-text { font-family: 'Lato', sans-serif; color: #555; flex-grow: 1; line-height: 1.6; }
 
 /* Category Badge for Card */
 .category-badge { display: inline-block; padding: 0.4em 0.8em; font-size: 0.8rem; font-weight: 700; font-family: 'Montserrat', sans-serif; line-height: 1; color: #fff; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 50px; background-color: var(--category-color, #6c757d); }
 
 /* Filter Buttons */
-#category-filters .filter-btn { font-weight: 700; border-radius: 20px; padding: 8px 20px; transition: all 0.3s; }
+#category-filters .filter-btn { 
+    font-weight: 700; 
+    border-radius: 20px; 
+    padding: 8px 20px; 
+    transition: all 0.3s; 
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+}
+#category-filters .filter-btn:hover {
+    background-color: var(--primary-hover-color);
+    color: #fff;
+    border-color: var(--primary-hover-color);
+}
+#category-filters .filter-btn.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+    pointer-events: none; /* Disable clicking on active button */
+}
 
-/* --- PAGE SECTIONS (LIBRARY THEME) --- */
+
+/* --- PAGE SECTIONS (Green Theme) --- */
 
 /* Hero Section Enhancement */
 .hero-section-v2 {
     color: #ffffff;
     padding: 8rem 0;
     text-align: left;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/id/24/1920/1080') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/id/1015/1920/1080') no-repeat center center;
     background-size: cover;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -100,7 +120,7 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
 .btn-custom-green, .btn-custom-action {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
-    color: #fff;
+    color: #333;
     padding: 0.75rem 1.5rem;
     font-weight: 700;
     transition: all 0.3s ease;
@@ -109,8 +129,8 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
 }
 
 .btn-custom-green:hover, .btn-custom-action:hover {
-    background-color: #8C3836;
-    border-color: #8C3836;
+    background-color: #d4b35a;
+    border-color: #d4b35a;
     transform: scale(1.05);
 }
 
@@ -132,17 +152,17 @@ main h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
 }
 
 /* Categories Section */
-.categories-section { padding: 4rem 0; background-color: #fff; }
+.categories-section { padding: 4rem 0; background-color: var(--card-bg); }
 .section-title { text-align: center; margin-bottom: 3rem; font-family: 'Montserrat', sans-serif; font-weight: 700; }
 .category-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-.category-tag { padding: 0.75rem 1.5rem; background-color: #FDFBF5; border: 1px solid #EAE0D3; border-radius: 50px; text-decoration: none; color: #5A4D3C; font-weight: 700; transition: all 0.3s; }
+.category-tag { padding: 0.75rem 1.5rem; background-color: #f4f8f7; border: 1px solid var(--border-color); border-radius: 50px; text-decoration: none; color: #555; font-weight: 700; transition: all 0.3s; }
 .category-tag:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
 
 /* Other Page Sections */
 .featured-stories { padding: 4rem 0; background-color: transparent; }
-.cta-section { padding: 4rem 0; background-color: #4a3f32; color: #fff; }
+.cta-section { padding: 4rem 0; background-color: #2c3e50; color: #fff; }
 .cta-section h2 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
-.main-footer { padding: 2rem 0; background-color: #3D352A; color: #f8f9fa; }
+.main-footer { padding: 2rem 0; background-color: #2c3e50; color: #f8f9fa; }
 
 /* Story Page Specifics */
 .story-body p {

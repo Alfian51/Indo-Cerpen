@@ -224,11 +224,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Helper function to get color based on category
         const getCategoryColor = (category) => {
             switch (category) {
-                case 'Komedi': return '#ffc107'; // Yellow
-                case 'Romance': return '#e83e8c'; // Pink
-                case 'Horror': return '#343a40'; // Dark Gray
-                case 'Misteri': return '#6f42c1'; // Purple
-                case 'Petualangan': return '#28a745'; // Green
+                case 'Komedi': return '#E9C46A'; // Golden Yellow
+                case 'Romance': return '#F4A261'; // Sandy Brown
+                case 'Horror': return '#264653'; // Dark Slate Gray
+                case 'Misteri': return '#8ab17d'; // Sage Green
+                case 'Petualangan': return '#2A9D8F'; // Teal Green
                 default: return '#6c757d'; // Gray
             }
         };
@@ -278,11 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttons = filterButtonsContainer.querySelectorAll('.filter-btn');
             buttons.forEach(button => {
                 if (button.getAttribute('data-category') === category) {
-                    button.classList.add('btn-primary');
-                    button.classList.remove('btn-outline-primary');
+                    button.classList.add('active');
                 } else {
-                    button.classList.remove('btn-primary');
-                    button.classList.add('btn-outline-primary');
+                    button.classList.remove('active');
                 }
             });
         };
